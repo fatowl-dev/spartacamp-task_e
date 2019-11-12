@@ -10,11 +10,9 @@ def main():
     time.sleep(1)
     stories = get_top_stories()
 
-    for i in range(len(stories)):
-        if i >= 5:
-            break
+    for story_id in stories[:5]:
         time.sleep(1)
-        story = get_story_by_id(stories[i])
+        story = get_story_by_id(story_id)
         print(story)
 
 
